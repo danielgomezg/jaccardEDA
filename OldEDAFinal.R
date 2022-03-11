@@ -219,7 +219,7 @@ DEAFinal <- function(datos, tamanoP){
   generacionesCRMax <- 1:length(crMax)
   
   par(mar = c(5, 4, 4, 4) + 0.25)
-  boxplot(x = matrizBox2, y = matrizBox2, xlab = "Generación ", ylab = "Valor del fitness")
+  boxplot(x = matrizBox2, y = matrizBox2, xlab = "GeneraciÃ³n ", ylab = "Valor del fitness")
   par(new = TRUE)
   plot(generaciones , crMin , type = "b", col = "green", lwd = 1.3, lty = 3, pch = 2, axes = FALSE, bty = "n", xlab = "", ylab = "")
   lines(generaciones ,mutacion , type = "b", col = "red", lwd = 1.3, lty = 3, pch = 20)
@@ -227,10 +227,10 @@ DEAFinal <- function(datos, tamanoP){
   L = legend(x = 'bottomleft', legend = c(0.5012,0.8808), col=2:3, lty=c(3,3), ncol=1, bty='n', x.intersp=0.5, pch=c(20,2), inset=0.02)
   
   # use position data of previous legend to draw legend with invisble lines and points but with labels and box. x.intersp controls distance between lines and labels
-  legend(x = L$rect$left, y = L$rect$top, legend = c("Factor de mutación", "Cruce"), col=rep(NA,2), lty=c(1,1), ncol=1, x.intersp = 4, bg = NA)
+  legend(x = L$rect$left, y = L$rect$top, legend = c("Factor de mutaciÃ³n", "Cruce"), col=rep(NA,2), lty=c(1,1), ncol=1, x.intersp = 4, bg = NA)
   
   axis(4)
-  mtext("Valor Cruce y Mutación", side = 4, line = 3, col = 1)
+  mtext("Valor Cruce y MutaciÃ³n", side = 4, line = 3, col = 1)
   
   print(paste0((proc.time() - tiempo)))
   
